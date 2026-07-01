@@ -49,15 +49,15 @@ SERVICES = [
             "and style - for business professionals, physicians, attorneys, and clients "
             "who need a precise, polished fit."
         ),
-        "image": "suit-rack.svg",
-        "alt": "A dark tailoring room with custom suits hanging on a brass rail",
+        "image": "suit-rack.png",
+        "alt": "Gold-framed bespoke suit and sports jacket artwork",
     },
     {
         "slug": "custom-dress-shirts",
         "name": "Custom Dress Shirts",
         "description": "Made-to-measure shirts, tailored casual and formal.",
-        "image": "fabric-swatches.svg",
-        "alt": "Fine shirting fabrics and measurement tools arranged on a tailor table",
+        "image": "fabric-swatches.png",
+        "alt": "Gold-framed custom dress shirt artwork",
     },
     {
         "slug": "bridal-formal-alterations",
@@ -66,15 +66,15 @@ SERVICES = [
             "Wedding dresses, evening gowns, and prom dresses - custom tailored and altered, "
             "including rush and same-day emergency alterations for brides."
         ),
-        "image": "bridal-alteration.svg",
-        "alt": "A bridal gown being pinned for delicate alteration work",
+        "image": "bridal-alteration.png",
+        "alt": "Gold-framed bridal and formal alteration artwork",
     },
     {
         "slug": "tuxedo-rentals",
         "name": "Tuxedo Rentals",
         "description": "Rental tuxedos for weddings and formal events.",
-        "image": "tuxedo-fitting.svg",
-        "alt": "A formal black tuxedo prepared for a wedding fitting",
+        "image": "tuxedo-fitting.png",
+        "alt": "Gold-framed tuxedo rental artwork",
     },
     {
         "slug": "general-alterations-repairs",
@@ -83,22 +83,22 @@ SERVICES = [
             "Alterations and repairs across menswear and womenswear, with fast turnaround "
             "(many garments ready in one to two weeks; expedited service available)."
         ),
-        "image": "fitting-detail-1.svg",
-        "alt": "Close detail of a tailor adjusting a jacket sleeve at a fitting",
+        "image": "fitting-detail-1.png",
+        "alt": "Gold-framed general alterations and repairs artwork",
     },
     {
         "slug": "embroidery",
         "name": "Embroidery",
         "description": "Custom embroidery work.",
-        "image": "embroidery-detail.svg",
-        "alt": "Custom embroidery thread work on deep fabric",
+        "image": "embroidery-detail.png",
+        "alt": "Gold-framed embroidery artwork",
     },
     {
         "slug": "custom-draperies",
         "name": "Custom Draperies",
         "description": "High-quality custom-made draperies for the home.",
-        "image": "custom-draperies.svg",
-        "alt": "Tailored custom draperies in a refined residential interior",
+        "image": "custom-draperies.png",
+        "alt": "Gold-framed custom draperies artwork",
     },
 ]
 
@@ -183,39 +183,39 @@ IMAGE_SLOTS = [
         "replace_with": "Replace only if the client provides a newer permission-cleared portrait of Genaro at work.",
     },
     {
-        "file": "fitting-detail-1.svg",
-        "showing": "Close-up placeholder of a fitting detail.",
-        "replace_with": "A real sleeve, hem, jacket, or gown fitting detail from the shop.",
+        "file": "fitting-detail-1.png",
+        "showing": "Normalized general alterations and repairs artwork.",
+        "replace_with": "Replace only if the client provides approved real alterations photography.",
     },
     {
-        "file": "suit-rack.svg",
-        "showing": "Custom suit rack placeholder.",
-        "replace_with": "Actual finished suits, jackets, or formalwear from G&M.",
+        "file": "suit-rack.png",
+        "showing": "Normalized custom suits and sports jackets artwork.",
+        "replace_with": "Replace only if the client provides approved real suit or jacket photography.",
     },
     {
-        "file": "bridal-alteration.svg",
-        "showing": "Bridal alteration placeholder.",
-        "replace_with": "A permission-cleared bridal gown alteration or lacework photo.",
+        "file": "bridal-alteration.png",
+        "showing": "Normalized bridal and formal alterations artwork.",
+        "replace_with": "Replace only if the client provides approved bridal or formalwear photography.",
     },
     {
-        "file": "fabric-swatches.svg",
-        "showing": "Fabric and measurement placeholder.",
-        "replace_with": "Actual fabric books, shirting swatches, or tailor tools from the shop.",
+        "file": "fabric-swatches.png",
+        "showing": "Normalized custom dress shirts artwork.",
+        "replace_with": "Replace only if the client provides approved shirtmaking or fabric photography.",
     },
     {
-        "file": "tuxedo-fitting.svg",
-        "showing": "Formal tuxedo placeholder.",
-        "replace_with": "A real tuxedo rental or wedding party fitting photo.",
+        "file": "tuxedo-fitting.png",
+        "showing": "Normalized tuxedo rentals artwork.",
+        "replace_with": "Replace only if the client provides approved tuxedo or formalwear photography.",
     },
     {
-        "file": "embroidery-detail.svg",
-        "showing": "Embroidery detail placeholder.",
-        "replace_with": "A real custom embroidery sample from G&M.",
+        "file": "embroidery-detail.png",
+        "showing": "Normalized embroidery artwork.",
+        "replace_with": "Replace only if the client provides approved embroidery photography.",
     },
     {
-        "file": "custom-draperies.svg",
-        "showing": "Custom drapery placeholder.",
-        "replace_with": "A finished drapery installation or fabric work photo.",
+        "file": "custom-draperies.png",
+        "showing": "Normalized custom draperies artwork.",
+        "replace_with": "Replace only if the client provides approved drapery photography.",
     },
     {
         "file": "editorial-break.svg",

@@ -41,17 +41,17 @@ The included `Procfile` and `render.yaml` are ready for a simple Python web serv
 
 ## Images To Replace
 
-The site currently uses local SVG placeholder image slots in `static/images/`. Replace these with real, permission-cleared client photography before launch. Keep filenames the same or update `data/content.py`.
+The site currently uses local image slots in `static/images/`, including SVG placeholders, a JPEG portrait, and normalized PNG service artwork. Replace these with real, permission-cleared client photography before launch. Keep filenames the same or update `data/content.py`.
 
 - `hero-atelier.svg`: currently a dark atelier hero placeholder. Replace with a real wide photo of the G&M fitting room, storefront interior, or tailoring table.
 - `tailor-portrait-genaro.jpeg`: currently the lead tailor portrait slot. Replace only if the client provides a newer permission-cleared portrait of Genaro at work.
-- `fitting-detail-1.svg`: currently a fitting detail placeholder. Replace with a real sleeve, hem, jacket, or gown fitting detail.
-- `suit-rack.svg`: currently a custom suit rack placeholder. Replace with actual finished suits, jackets, or formalwear from G&M.
-- `bridal-alteration.svg`: currently a bridal alteration placeholder. Replace with a permission-cleared bridal gown alteration or lacework photo.
-- `fabric-swatches.svg`: currently a fabric and measurement placeholder. Replace with actual fabric books, shirting swatches, or tailor tools from the shop.
-- `tuxedo-fitting.svg`: currently a formal tuxedo placeholder. Replace with a real tuxedo rental or wedding party fitting photo.
-- `embroidery-detail.svg`: currently an embroidery detail placeholder. Replace with a real custom embroidery sample from G&M.
-- `custom-draperies.svg`: currently a drapery placeholder. Replace with a finished drapery installation or fabric work photo.
+- `fitting-detail-1.png`: currently normalized general alterations and repairs artwork. Replace only if the client provides approved real alterations photography.
+- `suit-rack.png`: currently normalized custom suits and sports jackets artwork. Replace only if the client provides approved real suit or jacket photography.
+- `bridal-alteration.png`: currently normalized bridal and formal alterations artwork. Replace only if the client provides approved bridal or formalwear photography.
+- `fabric-swatches.png`: currently normalized custom dress shirts artwork. Replace only if the client provides approved shirtmaking or fabric photography.
+- `tuxedo-fitting.png`: currently normalized tuxedo rentals artwork. Replace only if the client provides approved tuxedo or formalwear photography.
+- `embroidery-detail.png`: currently normalized embroidery artwork. Replace only if the client provides approved embroidery photography.
+- `custom-draperies.png`: currently normalized custom draperies artwork. Replace only if the client provides approved drapery photography.
 - `editorial-break.svg`: currently a full-width editorial image placeholder. Replace with a full-width atelier, fitting, or finished garment photograph.
 
 Do not scrape Yelp, Instagram, or Facebook for images at build time or runtime. Mustafa should obtain usage permission from the shop owner before using photos from Instagram, Yelp, Facebook, or any client gallery.
