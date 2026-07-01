@@ -191,8 +191,9 @@ p { margin: 0 0 18px; color: var(--muted); }
 .hero {
   min-height: 100vh;
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -203,25 +204,33 @@ p { margin: 0 0 18px; color: var(--muted); }
   height: 100%;
 }
 
-.hero__image { object-fit: cover; }
+.hero__image {
+  object-fit: cover;
+  object-position: center;
+}
 
 .hero__overlay {
   background:
-    radial-gradient(circle at 70% 40%, rgba(176, 141, 69, .16), transparent 24%),
-    linear-gradient(180deg, rgba(18, 17, 15, .38), rgba(18, 17, 15, .9));
+    radial-gradient(circle at 50% 16%, rgba(176, 141, 69, .12), transparent 22%),
+    linear-gradient(180deg, rgba(18, 17, 15, .5), rgba(18, 17, 15, .18) 42%, rgba(18, 17, 15, .82));
 }
 
 .hero__content {
   position: relative;
-  width: min(980px, calc(100vw - 40px));
-  margin-top: 70px;
+  width: min(760px, calc(100vw - 40px));
+  margin-top: clamp(112px, 15vh, 168px);
   text-align: center;
+  will-change: opacity;
+}
+
+.hero__content h1 {
+  font-size: clamp(2.7rem, 5.5vw, 5.9rem);
 }
 
 .hero__content p:not(.eyebrow) {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  max-width: 700px;
-  margin: 0 auto 34px;
+  font-size: clamp(.9rem, 1.35vw, 1.08rem);
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .eyebrow { color: var(--gold); margin-bottom: 14px; }

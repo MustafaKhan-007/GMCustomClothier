@@ -173,9 +173,9 @@ MAP_QUERY = "G&M Custom Clothier, 13910 Lexington Blvd, Sugar Land, TX 77478"
 
 IMAGE_SLOTS = [
     {
-        "file": "hero-atelier.svg",
-        "showing": "Editorial placeholder for a dark atelier hero image.",
-        "replace_with": "A real wide photo of the G&M fitting room, storefront interior, or tailoring table.",
+        "file": "hero-atelier.jpg",
+        "showing": "Hero image of tailoring shears, measuring tape, chalk, thread, and pins.",
+        "replace_with": "Replace only if the client provides a newer approved hero image.",
     },
     {
         "file": "tailor-portrait-genaro.jpeg",

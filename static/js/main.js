@@ -10,6 +10,19 @@ const setHeaderState = () => {
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
+const heroContent = document.querySelector("[data-hero-content]");
+const hero = document.querySelector(".hero");
+const setHeroContentFade = () => {
+  if (!heroContent || !hero) return;
+  const fadeDistance = hero.offsetHeight * 0.55;
+  const progress = Math.min(Math.max(window.scrollY / fadeDistance, 0), 1);
+  heroContent.style.opacity = String(1 - progress);
+};
+
+setHeroContentFade();
+window.addEventListener("scroll", setHeroContentFade, { passive: true });
+window.addEventListener("resize", setHeroContentFade);
+
 if (toggle && menu) {
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("is-open");
