@@ -3,11 +3,11 @@
 {% block content %}
 <section class="page-hero">
   <p class="eyebrow">Gallery</p>
-  <h1>Photography slots for suits, bridal work, fittings, fabrics, and the atelier.</h1>
-  <p>These placeholders should be replaced with permission-cleared client photography before launch.</p>
+  <h1>Tailoring, formalwear, bridal work, fabrics, and atelier details.</h1>
+  <p>A visual look at tailoring, formalwear, bridal work, and clothier details.</p>
 </section>
 
-<section class="gallery-grid" aria-label="Gallery of placeholder tailoring images">
+<section class="gallery-grid" aria-label="Gallery of tailoring images">
   {% for item in gallery %}
     <button class="gallery-item reveal" type="button" data-lightbox="{{ image_path(item.image) }}" data-alt="{{ item.alt }}">
       <img src="{{ image_path(item.image) }}" alt="{{ item.alt }}" loading="lazy">
