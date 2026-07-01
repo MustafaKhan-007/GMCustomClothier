@@ -457,12 +457,12 @@ p { margin: 0 0 18px; color: var(--muted); }
 .page-hero--compact {
   min-height: auto;
   padding-top: clamp(132px, 13vw, 168px);
-  padding-bottom: clamp(34px, 5vw, 64px);
+  padding-bottom: clamp(20px, 3vw, 38px);
   justify-content: flex-end;
 }
 
 .page-hero--compact + .section {
-  padding-top: clamp(36px, 5vw, 68px);
+  padding-top: clamp(18px, 3vw, 36px);
 }
 
 .page-hero--image {
@@ -495,6 +495,13 @@ p { margin: 0 0 18px; color: var(--muted); }
 .service-detail img { width: 100%; min-height: 360px; object-fit: cover; border: 1px solid var(--line); }
 
 .prose-section { max-width: 900px; font-size: clamp(1.15rem, 2vw, 1.45rem); }
+.about-copy-section {
+  width: var(--container);
+  max-width: var(--container);
+  padding-bottom: clamp(28px, 4vw, 54px);
+}
+.about-copy-section p { max-width: 900px; }
+.about-process-section { padding-top: clamp(28px, 4vw, 54px); }
 .process__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .process-card span { color: var(--gold); letter-spacing: .2em; }
 
@@ -665,8 +672,8 @@ textarea { resize: vertical; }
   .testimonial-grid { grid-template-columns: 1fr; }
   .section { padding: 72px 0; }
   .page-hero { min-height: 460px; padding-top: 130px; }
-  .page-hero--compact { min-height: auto; padding-top: 118px; padding-bottom: 34px; }
-  .page-hero--compact + .section { padding-top: 34px; }
+  .page-hero--compact { min-height: auto; padding-top: 118px; padding-bottom: 22px; }
+  .page-hero--compact + .section { padding-top: 24px; }
   .service-card { flex-basis: 100%; }
   .service-card, .split-section__media img { min-height: 340px; }
   .footer__social { flex-direction: column; }
