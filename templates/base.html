@@ -30,16 +30,16 @@
         {% set nav_items = [
           ('home', 'Home', 'index'),
           ('services', 'Services', 'services_page'),
-          ('about', 'About', 'about'),
           ('gallery', 'Gallery', 'gallery'),
           ('reviews', 'Reviews', 'reviews'),
-          ('contact', 'Contact', 'contact')
+          ('about', 'About us', 'about'),
+          ('contact', 'Contact us', 'contact')
         ] %}
         {% for key, label, endpoint in nav_items %}
           <a class="nav-link{% if active_page == key %} is-active{% endif %}" href="{{ url_for(endpoint) }}">{{ label }}</a>
         {% endfor %}
       </div>
-      <a class="nav-cta" href="{{ url_for('contact') }}">Book</a>
+      <a class="nav-cta" href="{{ url_for('contact') }}">Book Consultation</a>
     </nav>
   </header>
 
