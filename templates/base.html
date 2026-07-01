@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ url_for('static', filename='images/hero-atelier.svg', _external=True) }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="{{ url_for('index') }}" aria-label="{{ business.name }} home">
+        <span class="brand__mark">G&M</span>
+        <span class="brand__text">Custom Clothier</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+      <div class="nav-menu" id="primary-menu" data-nav-menu>
+        {% set nav_items = [
+          ('home', 'Home', 'index'),
+          ('services', 'Services', 'services_page'),
+          ('about', 'About', 'about'),
+          ('gallery', 'Gallery', 'gallery'),
+          ('reviews', 'Reviews', 'reviews'),
+          ('contact', 'Contact', 'contact')
+        ] %}
+        {% for key, label, endpoint in nav_items %}
+          <a class="nav-link{% if active_page == key %} is-active{% endif %}" href="{{ url_for(endpoint) }}">{{ label }}</a>
+        {% endfor %}
+      </div>
+      <a class="nav-cta" href="{{ url_for('contact') }}">Book</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="footer__rule"></div>
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">{{ business.name }}</p>
+        <p>{{ business.secondary_tagline }}</p>
+        <div class="footer__social">
+          <a href="{{ social.instagram }}" target="_blank" rel="noopener">Instagram</a>
+          <a href="{{ social.facebook }}" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div>
+        <h2>Navigation</h2>
+        <a href="{{ url_for('services_page') }}">Services</a>
+        <a href="{{ url_for('about') }}">About Genaro</a>
+        <a href="{{ url_for('gallery') }}">Gallery</a>
+        <a href="{{ url_for('reviews') }}">Reviews</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </div>
+      <div>
+        <h2>Services</h2>
+        {% for service in services[:5] %}
+          <a href="{{ url_for('services_page') }}#{{ service.slug }}">{{ service.name }}</a>
+        {% endfor %}
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>{{ business.address.line1 }}<br>{{ business.address.city }}, {{ business.address.state }} {{ business.address.zip }}</p>
+        <a href="tel:+12819803097">{{ business.phone }}</a>
+        <a href="mailto:{{ business.email }}">{{ business.email }}</a>
+      </div>
+    </div>
+    <p class="footer__fine">Prototype website for {{ business.name }}. Review excerpts are paraphrased summaries of public reviews, not direct quotes.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>

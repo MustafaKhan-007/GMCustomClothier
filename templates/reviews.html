@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero">
+  <p class="eyebrow">Reviews</p>
+  <h1>Public praise, summarized with restraint.</h1>
+  <p>These review cards are paraphrased summaries of public feedback and should not be presented as verbatim quotations.</p>
+</section>
+
+<section class="section review-summary">
+  <div class="snapshot-card reveal">
+    <h2>Review Snapshot</h2>
+    {% for source, value in review_snapshot.items() %}
+      <p><strong>{{ source|title }}:</strong> {{ value }}</p>
+    {% endfor %}
+    <div class="review-links">
+      <a class="button button--outline" href="{{ social.facebook }}" target="_blank" rel="noopener">Read on Facebook</a>
+      <a class="button button--outline" href="{{ social.yelp_search }}" target="_blank" rel="noopener">Find on Yelp</a>
+    </div>
+  </div>
+  <div class="review-grid">
+    {% for item in testimonials %}
+      <article class="testimonial-card reveal">
+        <div class="stars" aria-label="Five star review">★★★★★</div>
+        <p>"{{ item.text }}"</p>
+        <strong>{{ item.source }}</strong>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

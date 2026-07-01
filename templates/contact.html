@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero">
+  <p class="eyebrow">Contact</p>
+  <h1>Book a fitting, alteration, or consultation.</h1>
+  <p>Tell the shop what you are bringing in, when you need it, and how to reach you.</p>
+</section>
+
+<section class="section contact-layout">
+  <div class="contact-panel reveal">
+    <h2>Visit G&M</h2>
+    <p>{{ business.address.line1 }}<br>{{ business.address.city }}, {{ business.address.state }} {{ business.address.zip }}</p>
+    <p><a href="tel:+12819803097">{{ business.phone }}</a><br><a href="mailto:{{ business.email }}">{{ business.email }}</a></p>
+    <h3>Hours</h3>
+    <div class="hours-table">
+      {% for day, value in hours.items() %}
+        <div><span>{{ day }}</span><span>{{ value }}</span></div>
+      {% endfor %}
+    </div>
+    <h3>Payment Methods</h3>
+    <p class="pill-list">{% for method in payment_methods %}<span>{{ method }}</span>{% endfor %}</p>
+    <h3>Amenities</h3>
+    <p class="pill-list">{% for amenity in amenities %}<span>{{ amenity }}</span>{% endfor %}</p>
+  </div>
+
+  <form class="booking-form reveal" method="post" novalidate data-booking-form>
+    <h2>Consultation Request</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <p class="form-alert form-alert--{{ category }}">{{ message }}</p>
+      {% endfor %}
+    {% endwith %}
+
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" value="{{ form_data.get('name', '') }}" required>
+    {% if errors.get('name') %}<span class="field-error">{{ errors.name }}</span>{% endif %}
+
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="tel" value="{{ form_data.get('phone', '') }}" required>
+    {% if errors.get('phone') %}<span class="field-error">{{ errors.phone }}</span>{% endif %}
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" value="{{ form_data.get('email', '') }}" required>
+    {% if errors.get('email') %}<span class="field-error">{{ errors.email }}</span>{% endif %}
+
+    <label for="service">Service Interested In</label>
+    <select id="service" name="service" required>
+      <option value="">Choose a service</option>
+      {% for service in services %}
+        <option value="{{ service.name }}" {% if form_data.get('service') == service.name %}selected{% endif %}>{{ service.name }}</option>
+      {% endfor %}
+    </select>
+    {% if errors.get('service') %}<span class="field-error">{{ errors.service }}</span>{% endif %}
+
+    <label for="preferred_date">Preferred Date</label>
+    <input id="preferred_date" name="preferred_date" type="date" value="{{ form_data.get('preferred_date', '') }}" required>
+    {% if errors.get('preferred_date') %}<span class="field-error">{{ errors.preferred_date }}</span>{% endif %}
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required>{{ form_data.get('message', '') }}</textarea>
+    {% if errors.get('message') %}<span class="field-error">{{ errors.message }}</span>{% endif %}
+
+    <button class="button" type="submit">Send Request</button>
+    <p class="form-note">Prototype only: this currently logs submissions locally and does not send email.</p>
+  </form>
+</section>
+
+<section class="map-section">
+  <iframe title="Map to G&M Custom Clothier" src="{{ map_embed_url }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+{% endblock %}

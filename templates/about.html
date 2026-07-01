@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero page-hero--image">
+  <div>
+    <p class="eyebrow">About</p>
+    <h1>Built around the person wearing the garment.</h1>
+    <p>{{ business.founded_note }} under the eye of master tailor {{ business.lead_tailor }}.</p>
+  </div>
+  <img src="{{ image_path('tailor-portrait-genaro.svg') }}" alt="Portrait placeholder for Genaro at G&M Custom Clothier" loading="lazy">
+</section>
+
+<section class="section prose-section reveal">
+  <p>{{ about_copy }}</p>
+  <p>{{ business.client_focus }}</p>
+</section>
+
+<section class="section process">
+  <div class="section__intro reveal">
+    <p class="eyebrow">The Process</p>
+    <h2>Measured, shaped, refined, delivered.</h2>
+  </div>
+  <div class="process__grid">
+    {% for step in process_steps %}
+      <article class="process-card reveal">
+        <span>{{ "%02d"|format(loop.index) }}</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
