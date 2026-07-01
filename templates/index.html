@@ -27,9 +27,7 @@
     {% for service in services %}
       <a class="service-card reveal" href="{{ url_for('services_page') }}#{{ service.slug }}">
         <img src="{{ image_path(service.image) }}" alt="{{ service.alt }}" loading="lazy">
-        <span>{{ "%02d"|format(loop.index) }}</span>
         <h3>{{ service.name }}</h3>
-        <p>{{ service.description }}</p>
       </a>
     {% endfor %}
   </div>
@@ -61,7 +59,7 @@
     <h2>Public review highlights, paraphrased for this prototype.</h2>
     <p class="muted">For full reviews, visit the shop's public profiles on <a href="{{ social.facebook }}" target="_blank" rel="noopener">Facebook</a> or <a href="{{ social.yelp_search }}" target="_blank" rel="noopener">Yelp search</a>.</p>
   </div>
-  <div class="testimonial-carousel" data-carousel>
+  <div class="testimonial-grid">
     {% for item in testimonials %}
       <article class="testimonial-card reveal">
         <div class="stars" aria-label="Five star review">★★★★★</div>
