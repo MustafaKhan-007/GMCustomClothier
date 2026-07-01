@@ -454,6 +454,17 @@ p { margin: 0 0 18px; color: var(--muted); }
 
 .page-hero p { max-width: 760px; }
 
+.page-hero--compact {
+  min-height: auto;
+  padding-top: clamp(132px, 13vw, 168px);
+  padding-bottom: clamp(34px, 5vw, 64px);
+  justify-content: flex-end;
+}
+
+.page-hero--compact + .section {
+  padding-top: clamp(36px, 5vw, 68px);
+}
+
 .page-hero--image {
   display: grid;
   grid-template-columns: 1.1fr .65fr;
@@ -654,6 +665,8 @@ textarea { resize: vertical; }
   .testimonial-grid { grid-template-columns: 1fr; }
   .section { padding: 72px 0; }
   .page-hero { min-height: 460px; padding-top: 130px; }
+  .page-hero--compact { min-height: auto; padding-top: 118px; padding-bottom: 34px; }
+  .page-hero--compact + .section { padding-top: 34px; }
   .service-card { flex-basis: 100%; }
   .service-card, .split-section__media img { min-height: 340px; }
   .footer__social { flex-direction: column; }
