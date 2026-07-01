@@ -225,5 +225,60 @@ IMAGE_SLOTS = [
 ]
 
 GALLERY = [
-    {"image": slot["file"], "alt": slot["showing"]} for slot in IMAGE_SLOTS
+    {
+        "image": "gallery/custom-drapery-pillows.jpg",
+        "alt": "Custom drapery and pillow styling in a bedroom",
+    },
+    {
+        "image": "gallery/decorative-pillows-window.jpg",
+        "alt": "Decorative custom pillows arranged on a window bench",
+    },
+    {
+        "image": "gallery/bridal-gown-fitting.jpg",
+        "alt": "Bride in a fitted lace wedding gown during an alteration appointment",
+    },
+    {
+        "image": "gallery/black-business-suit.jpg",
+        "alt": "Close view of a black business suit and tie",
+    },
+    {
+        "image": "gallery/red-formal-gown.jpg",
+        "alt": "Red formal gown with lace bodice and tulle skirt",
+    },
+    {
+        "image": "gallery/purple-velvet-dress.jpg",
+        "alt": "Purple velvet dress with tailored drape",
+    },
+    {
+        "image": "gallery/custom-suit-lining.jpg",
+        "alt": "Custom suit jacket lining with personalized label",
+    },
+    {
+        "image": "gallery/silver-velvet-dress.jpg",
+        "alt": "Silver velvet dress with flared sleeves",
+    },
+    {
+        "image": "gallery/black-tuxedo.jpg",
+        "alt": "Black tuxedo with bow tie",
+    },
+    {
+        "image": "gallery/floral-formal-fitting.jpg",
+        "alt": "Floral formal gown being fitted in front of mirrors",
+    },
+    {
+        "image": "gallery/navy-three-piece-suit.jpg",
+        "alt": "Navy three-piece suit with tie",
+    },
+    {
+        "image": "gallery/black-formal-gown.jpg",
+        "alt": "Black formal gown with lace top and full skirt",
+    },
+    {
+        "image": "gallery/blush-formal-gown.jpg",
+        "alt": "Blush off-shoulder formal gown with full skirt",
+    },
+    {
+        "image": "gallery/bespoke-jacket-pattern.jpg",
+        "alt": "Bespoke jacket pattern pieces being hand stitched",
+    },
 ]
