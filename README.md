@@ -44,7 +44,7 @@ The included `Procfile` and `render.yaml` are ready for a simple Python web serv
 The site currently uses local SVG placeholder image slots in `static/images/`. Replace these with real, permission-cleared client photography before launch. Keep filenames the same or update `data/content.py`.
 
 - `hero-atelier.svg`: currently a dark atelier hero placeholder. Replace with a real wide photo of the G&M fitting room, storefront interior, or tailoring table.
-- `tailor-portrait-genaro.svg`: currently a portrait placeholder. Replace with a permission-cleared portrait of Genaro at work.
+- `tailor-portrait-genaro.jpeg`: currently the lead tailor portrait slot. Replace only if the client provides a newer permission-cleared portrait of Genaro at work.
 - `fitting-detail-1.svg`: currently a fitting detail placeholder. Replace with a real sleeve, hem, jacket, or gown fitting detail.
 - `suit-rack.svg`: currently a custom suit rack placeholder. Replace with actual finished suits, jackets, or formalwear from G&M.
 - `bridal-alteration.svg`: currently a bridal alteration placeholder. Replace with a permission-cleared bridal gown alteration or lacework photo.

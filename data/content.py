@@ -178,9 +178,9 @@ IMAGE_SLOTS = [
         "replace_with": "A real wide photo of the G&M fitting room, storefront interior, or tailoring table.",
     },
     {
-        "file": "tailor-portrait-genaro.svg",
-        "showing": "Portrait placeholder for the lead tailor story.",
-        "replace_with": "A permission-cleared portrait of Genaro at work.",
+        "file": "tailor-portrait-genaro.jpeg",
+        "showing": "Portrait photo for the lead tailor story.",
+        "replace_with": "Replace only if the client provides a newer permission-cleared portrait of Genaro at work.",
     },
     {
         "file": "fitting-detail-1.svg",
