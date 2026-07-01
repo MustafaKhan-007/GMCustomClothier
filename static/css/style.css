@@ -89,9 +89,18 @@ p { margin: 0 0 18px; color: var(--muted); }
   gap: 28px;
 }
 
-.brand { display: inline-grid; line-height: 1; }
-.brand__mark { color: var(--ivory); font-family: var(--serif); font-size: 2rem; letter-spacing: .04em; }
-.brand__text { color: var(--gold); font-size: .67rem; letter-spacing: .32em; text-transform: uppercase; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.brand__logo {
+  display: block;
+  width: auto;
+  height: 58px;
+  object-fit: contain;
+}
 
 .nav-menu {
   justify-self: center;
@@ -655,8 +664,7 @@ textarea { resize: vertical; }
 
 @media (max-width: 680px) {
   .nav { min-height: 72px; width: calc(100vw - 28px); gap: 12px; }
-  .brand__mark { font-size: 1.6rem; }
-  .brand__text { letter-spacing: .18em; }
+  .brand__logo { height: 50px; }
   .nav-cta { display: none; }
   .nav-menu { inset: 72px 0 0; }
   .hero { min-height: 760px; }
